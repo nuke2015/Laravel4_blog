@@ -49,26 +49,27 @@ return array(
 		'sqlite' => array(
 			'driver'   => 'sqlite',
 			'database' => __DIR__.'/../database/production.sqlite',
-			'prefix'   => '',
+			'prefix'   => 'l4_',
 		),
 
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'appdb',
+			'database'  => 'blog',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',
-			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
+			// 'collation' => 'utf8_unicode_ci',
+			'collation' => 'utf8_general_ci',
+			'prefix'    => 'l4_',
 		),
 
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
-			'database' => 'appdb',
+			'database' => 'database',
 			'username' => 'root',
-			'password' => 'password',
+			'password' => '',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',
@@ -92,7 +93,7 @@ return array(
 	|
 	| This table keeps track of all the migrations that have already run for
 	| your application. Using this information, we can determine which of
-	| the migrations on disk have not actually be run in the databases.
+	| the migrations on disk haven't actually been run in the database.
 	|
 	*/
 
@@ -111,7 +112,7 @@ return array(
 
 	'redis' => array(
 
-		'cluster' => true,
+		'cluster' => false,
 
 		'default' => array(
 			'host'     => '127.0.0.1',
